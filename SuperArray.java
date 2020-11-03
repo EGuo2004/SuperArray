@@ -9,10 +9,13 @@ public class SuperArray {
 
 
   public int size() {
-      return this.size;
+      return size;
   }
 
   public boolean add(String element) {
+    if (size + 1 >= data.length) {
+      resize();
+    }
     data[size] = element;
     size ++;
     return true;
@@ -28,7 +31,7 @@ public class SuperArray {
   }
 
   public void resize() {
-    tempArray = new String[size + 10];
+    String [] tempArray = new String[size + 10];
     for(int i = 0; i < data.length; i++) {
       tempArray[i] = data[i];
     }
