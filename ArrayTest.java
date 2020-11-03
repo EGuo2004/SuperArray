@@ -3,6 +3,7 @@ public class ArrayTest {
 
     SuperArray words = new SuperArray();
     System.out.println(words.size());
+    System.out.println(words.isEmpty());
 
     words.add("kani");
     words.add("uni");
@@ -30,10 +31,28 @@ public class ArrayTest {
 
     System.out.println(words.size());
     System.out.println(words.get(10));
+    System.out.println(words.isEmpty());
 
     for(int current = 0; current < words.size(); current++){
     System.out.print(words.get(current) + " ");
   }
+
+  System.out.println(words.size());
+  words.clear();
+  System.out.println(words.size());
+
+  words.add("Alpha");
+  words.add("Beta");
+  words.add("Gamma");
+  words.add("Delta");
+  words.add("Epsilon");
+  words.add("Zeta");
+  words.add("Eta");
+  words.add("Theta");
+  words.add("Iota");
+  words.add("Kappa");
+  words.add("Lambda");
+  System.out.println(words.toString());
 
   }
 }
