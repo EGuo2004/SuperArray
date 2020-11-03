@@ -37,4 +37,8 @@ public class SuperArray {
     }
     data = tempArray;
   }
+
+  public boolean isEmpty() {
+    return size==0;
+  }
 }
