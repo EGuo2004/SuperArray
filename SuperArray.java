@@ -46,4 +46,16 @@ public class SuperArray {
     data = new String[size];
     size = 0;
   }
+
+  public String toString() {
+    String CurrentArray = "";
+    for(int current = 0; current < size(); current++){
+      if (current + 1 < size()) {
+        CurrentArray += get(current) + ", ";
+      } else {
+        CurrentArray += get(current);
+      }
+    }
+    return "{" + CurrentArray +"}";
+  }
 }
