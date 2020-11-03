@@ -7,6 +7,12 @@ public class SuperArray {
     size = 0;
   }
 
+  public SuperArray(int initialCapacity) {
+    if (initialCapacity >= 0) {
+      data = new String[initialCapacity];
+      size = 0;
+  }
+
 
   public int size() {
       return size;
@@ -58,4 +64,6 @@ public class SuperArray {
     }
     return "{" + CurrentArray +"}";
   }
+
+
 }
