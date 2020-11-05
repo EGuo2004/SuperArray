@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class ArrayTest {
   public static void main(String[]args){
 
@@ -41,18 +42,39 @@ public class ArrayTest {
   words.clear();
   System.out.println(words.size());
 
-  words.add("Alpha");
-  words.add("Beta");
-  words.add("Gamma");
-  words.add("Delta");
-  words.add("Epsilon");
-  words.add("Zeta");
-  words.add("Eta");
-  words.add("Theta");
-  words.add("Iota");
-  words.add("Kappa");
-  words.add("Lambda");
-  System.out.println(words.toString());
+  //Breaker Line
+  SuperArray Frame = new SuperArray(50);
+  Frame.add("Excalibur");
+  Frame.add("Loki");
+  Frame.add("Ember");
+  Frame.add("Ash");
+  Frame.add("Trinity");
+  Frame.add("Mag");
+  Frame.add("Rhino");
+  Frame.add("Volt");
+  Frame.add("Valkyr");
+  Frame.add("Frost");
+  Frame.add("Banshee");
+  Frame.add("Wisp");
+  Frame.add("Saryn");
+  System.out.println(Frame.toString());
+
+  //Test for Add + Shift
+  Frame.add(10, "Nyx");
+  System.out.println(Frame.toString());
+
+  //Test for Remove + Shift
+  Frame.remove(12);
+  System.out.println(Frame.toString());
+
+  Frame.add("Mag");
+  System.out.println(Frame.toString());
+  System.out.println(Frame.indexOf("Saryn"));
+  System.out.println(Frame.indexOf("Mag"));
+  System.out.println(Frame.indexOf("Wisp"));
+  Frame.remove(13);
+  System.out.println(Arrays.toString(Frame.toArray()));
+
 
   }
 }
