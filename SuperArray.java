@@ -11,6 +11,7 @@ public class SuperArray {
     if (initialCapacity >= 0) {
       data = new String[initialCapacity];
       size = 0;
+    }
   }
 
 
@@ -65,5 +66,14 @@ public class SuperArray {
     return "{" + CurrentArray +"}";
   }
 
+  public void add(int index, String element) {
+    for(int i = size - 1; i >= index; i-- ) {
+      data[i + 1] = data[i];
+    }
+    data[index] = element;
+    size ++;
+  }
+
+  
 
 }
