@@ -74,6 +74,11 @@ public class SuperArray {
     size ++;
   }
 
-  
+  public void remove(int index) {
+    for (int i = index; i < size; i++ ) {
+      data[i] = data[i + 1];
+    }
+    size--;
+  }
 
 }
