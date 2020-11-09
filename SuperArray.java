@@ -8,6 +8,9 @@ public class SuperArray {
   }
 
   public SuperArray(int initialCapacity) {
+    if (initialCapacity < 0) {
+      throw new IllegalArgumentException("Initial Capaity cannot be a negative value.");
+    }
     if (initialCapacity >= 0) {
       data = new String[initialCapacity];
       size = 0;
@@ -124,7 +127,7 @@ public class SuperArray {
 
   public boolean equals(SuperArray other){
     if (size() != other.size()) {
-      return false; 
+      return false;
     }
     for (int i = 0; i < size() && i < other.size(); i++) {
       if (!data[i].equals(other.get(i))) {
