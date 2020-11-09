@@ -112,4 +112,13 @@ public class SuperArray {
     return contained;
   }
 
+  public int lastIndexOf(String value){
+    int x = -1;
+    for (int i = 0; i < size(); i++) {
+      if (data[i].equals(value)) {
+        x = i;
+      }
+    }
+    return x;
+  }
 }
