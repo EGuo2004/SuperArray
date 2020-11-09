@@ -126,6 +126,10 @@ public class Demo {
   EF.add("sjdvjxcjvbjcvi");
   System.out.println(Dupe);
   System.out.println(findOverlap(EqualFrame, EF));
+
+  System.out.println(zip(Frame, Dupe));
+
+  //System.out.println(findOverlap(new SuperArray(), zip(Frame, new SuperArray())).equals(new SuperArray()));
   }
 
   public static void removeDuplicates(SuperArray s){
@@ -146,6 +150,19 @@ public class Demo {
     }
     removeDuplicates(OL);
     return OL;
+  }
+
+  public static SuperArray zip(SuperArray a, SuperArray b){
+    SuperArray zipped = new SuperArray();
+    for( int i = 0; i < a.size() || i < b.size(); i++) {
+      if (a.size() > i) {
+        zipped.add(a.get(i));
+      }
+      if (b.size() > i) {
+        zipped.add(b.get(i));
+      }
+    }
+    return zipped;
   }
 }
 
