@@ -111,6 +111,21 @@ public class Demo {
   System.out.println(Dupe);
   removeDuplicates(Dupe);
   System.out.println(Dupe);
+
+  EqualFrame.add("Nyx");
+  EqualFrame.add("Nyx");
+  EqualFrame.add("Nyx");
+  EqualFrame.add("Nyx");
+
+  SuperArray EF = new SuperArray();
+  EF.add("Wisp");
+  EF.add("asd");
+  EF.add("Nyx");
+  EF.add("shvcjxc");
+  EF.add("Frost");
+  EF.add("sjdvjxcjvbjcvi");
+  System.out.println(Dupe);
+  System.out.println(findOverlap(EqualFrame, EF));
   }
 
   public static void removeDuplicates(SuperArray s){
@@ -120,6 +135,17 @@ public class Demo {
         i--;
       }
     }
+  }
+
+  public static SuperArray findOverlap(SuperArray a, SuperArray b) {
+    SuperArray OL = new SuperArray();
+    for (int i = 0; i < a.size(); i++) {
+      if (b.contains(a.get(i))) {
+        OL.add(a.get(i));
+      }
+    }
+    removeDuplicates(OL);
+    return OL;
   }
 }
 
