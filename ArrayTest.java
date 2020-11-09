@@ -74,8 +74,10 @@ public class ArrayTest {
   System.out.println(Frame.indexOf("Wisp"));
   Frame.remove(13);
   System.out.println(Arrays.toString(Frame.toArray()));
-
-
+  System.out.println(Frame.lastIndexOf("Wisp"));
+  Frame.add("Excalibur");
+  System.out.println(Frame.toString());
+  System.out.println(Frame.lastIndexOf("Excalibur"));
   }
 }
 
