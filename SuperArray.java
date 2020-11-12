@@ -32,6 +32,9 @@ public class SuperArray {
   }
 
   public String get(int index) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index less than 0 or Greater than the size of the array");
+    }
     return data[index];
   }
 
@@ -42,7 +45,7 @@ public class SuperArray {
   }
 
   public void resize() {
-    String [] tempArray = new String[size + 10];
+    String [] tempArray = new String[(size * 2) + 1];
     for(int i = 0; i < data.length; i++) {
       tempArray[i] = data[i];
     }
