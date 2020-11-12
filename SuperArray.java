@@ -88,6 +88,9 @@ public class SuperArray {
   }
 
   public String remove(int index) {
+    if (index < 0 || index >= size()) {
+      throw new IndexOutOfBoundsException("Index less than 0 or Greater than/Equal to the size of the array");
+    }
     String returnValue = data[index];
     for (int i = index; i < size() - 1; i++ ) {
       data[i] = data[i + 1];
