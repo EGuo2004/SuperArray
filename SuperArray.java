@@ -33,14 +33,14 @@ public class SuperArray {
 
   public String get(int index) {
     if (index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException("Index less than 0 or Greater than the size of the array");
+      throw new IndexOutOfBoundsException("Index less than 0 or Greater than/Equal to the size of the array");
     }
     return data[index];
   }
 
   public String set(int index, String element) {
     if (index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException("Index less than 0 or Greater than the size of the array");
+      throw new IndexOutOfBoundsException("Index less than 0 or Greater than/Equal to the size of the array");
     }
     String returnString = data[index];
     data[index] = element;
@@ -77,6 +77,9 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
+    if (index < 0 || index > size()) {
+      throw new IndexOutOfBoundsException("Index less than 0 or Greater than the size of the array");
+    }
     for(int i = size - 1; i >= index; i-- ) {
       data[i + 1] = data[i];
     }
