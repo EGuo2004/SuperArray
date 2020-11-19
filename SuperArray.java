@@ -81,6 +81,9 @@ public class SuperArray {
       throw new IndexOutOfBoundsException("Index less than 0 or Greater than the size of the array");
     }
     for(int i = size - 1; i >= index; i-- ) {
+      if (size + 1 >= data.length) {
+        resize();
+      }
       data[i + 1] = data[i];
     }
     data[index] = element;
